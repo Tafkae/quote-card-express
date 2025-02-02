@@ -1,0 +1,162 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+/* Main styles */
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #f9f9f9;
+  font-family: "Space Grotesk", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  background: radial-gradient(
+      circle at top right,
+      rgb(137, 38, 175),
+      transparent 45%
+    ),
+    radial-gradient(circle at top, rgb(204, 48, 133), rgb(0, 27, 46) 90%);
+    background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 1.6rem;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0 0 1.6rem;
+}
+
+a {
+  color: #0056b3;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+  color: #002348;
+  border-bottom: 2px solid #002348;
+}
+
+hr {
+  margin: 3.2rem 1.6rem;
+  color: #555555;
+  border-color: #555555;
+}
+
+/* STYLES */
+
+q.quote-content {
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: block;
+  text-align: left;
+  hyphens: manual;
+}
+
+cite.quote-author {
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.quote-content::first-line {
+  margin: 0;
+  padding: 0;
+}
+
+q.quote-content::before,
+q.quote-content::after {
+  display: block;
+  width: 110%;
+  margin-left: -5%;
+
+  font-family: "Space Grotesk", serif;
+  font-size: 2.3rem;
+  line-height: 1rem;
+  /* border: 1px solid red; */
+}
+
+q.quote-content::before {
+  content: "“";
+  text-align: left;
+  position: relative;
+  top: 0.3rem;
+  /* left: -1rem; */
+}
+q.quote-content::after {
+  content: "”";
+  /* content: '„'; */
+  text-align: right;
+  position: relative;
+  bottom: -0.3rem;
+  /* right: -1rem; */
+}
+
+/* Layout */
+
+.main,
+.container {
+  display: grid;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  grid-template: 1fr 6fr 1fr / 1fr 8fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". container ."
+    ". . .";
+}
+
+.container {
+  grid-area: container;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". middle ."
+    ". . .";
+
+  border: 2px solid #fff;
+}
+
+.quote {
+  display: block;
+  grid-area: middle;
+}
+
+.quote-content {
+  display: block;
+  text-align: left;
+}
+
+.quote-author {
+  display: block;
+  text-align: center;
+}
+
+/* Media Queries */
+
+@media (min-width: 699px) {
+  /* CSS HERE */
+}
+
+/* Desktop Media Query */
+@media (min-width: 999px) {
+  /* CSS HERE */
+}
